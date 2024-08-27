@@ -1,9 +1,23 @@
 # Write your return_cost function here:
 def return_cost(menu, item):
+  found = item in menu
+  if found:
+    return menu[item]
+  else: 
+    return 0
   pass
 
-# Write your fanciest_flavor function here:
 
+# Write your fanciest_flavor function here:
+def fanciest_flavor(flavors):
+  highest_cost = 0
+  fanciest = ''
+  for flavor in flavors:
+    if flavors[flavor] > highest_cost:
+      fanciest = flavor
+      highest_cost = flavors[flavor]
+  print('The fanciest flavor is', fanciest, 'and it costs', highest_cost)
+  pass
 
 def main():
   flavors = {
@@ -25,8 +39,8 @@ def main():
     print(f"The price for {choice} is ${price} per scoop.")
 
 # Uncomment the lines below after you code your fanciest_flavor function.
-  # print('---')
-  # expensive_flavor = fanciest_flavor(flavors)
-  # print(f"The most expensive flavor we have is {expensive_flavor}.")
+  print('---')
+  expensive_flavor = fanciest_flavor(flavors)
+  #print(f"The most expensive flavor we have is {expensive_flavor}.")
 
 main()

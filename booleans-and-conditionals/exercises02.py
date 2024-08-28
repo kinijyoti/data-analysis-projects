@@ -1,4 +1,4 @@
-engine_indicator_light = "red blinking"
+zengine_indicator_light = "red blinking"
 space_suits_on = True
 shuttle_cabin_ready = True
 crew_status = space_suits_on and shuttle_cabin_ready
@@ -31,15 +31,5 @@ else:
     print("Stable speed")
 
 # 4) PREDICT: Do the code blocks shown in the Section D produce the same result?
-if crew_status and computer_status_code == 200 and space_suits_on:
-   print("all systems go")
-else:
-   print("WARNING. Not ready")
-
-if crew_status != True or computer_status_code != 200 or not(space_suits_on):
-   print("WARNING. Not ready")
-else:
-   print("all systems go")
 
 # print("Yes" or "No")
-print("yes")
